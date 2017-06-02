@@ -58,3 +58,4 @@ group :development, :test do
 end
 
 #bootstrap gem
+gem 'bootstrap'
