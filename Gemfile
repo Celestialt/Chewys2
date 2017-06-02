@@ -59,3 +59,6 @@ end
 
 #bootstrap gem
 gem 'bootstrap'
+
+#devise
+gem 'devise'
