@@ -7,4 +7,14 @@ RSpec.describe StaticPagesController, type: :controller do
 			expect(response).to have_http_status(:success)
 		end
 	end
+
+	
+	# describe "Product" do
+	# 	describe "#initialize" do
+	# 		it "should create a product with a name and price"
+	# 		it "should raise an error if the price was not given"
+	# 	end
+		
+	# end
+
 end
