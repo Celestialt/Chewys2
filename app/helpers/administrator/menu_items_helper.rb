@@ -1,0 +1,2 @@
+module Administrator::MenuItemsHelper
+end
