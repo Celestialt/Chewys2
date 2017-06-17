@@ -1,5 +1,9 @@
 class Administrator::MenuItemsController < ApplicationController
 	before_action :authenticate_user!
+	
+	def index
+		
+	end
 
 	def new
 		@menu_item = MenuItem.new
@@ -18,6 +22,6 @@ class Administrator::MenuItemsController < ApplicationController
 	private
 
 	def menu_item_params
-		params.require(:menu_item).permit(:name, :description, :price)
+		params.require(:menu_item).permit(:name, :description, :price, :image)
 	end
 end

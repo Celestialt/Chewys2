@@ -1,0 +1,15 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+	<h1>Add Business Hours Here:</h1>
+	<%= simple_form_for @business_hour, url: administrator_business_hours_path do |f| %>
+    <%= f.input :day, label: "Day:" %>
+    <%= f.input :opening_time, as: :time, label: "From:", :ampm => true %>
+    <%= f.input :closing_time, as: :time, label: "To:", :ampm => true %>
+    <br />
+    <%= f.submit "Create", class: 'btn btn-primary' %>
+    <br />
+  <% end %>
+  <br />
+
+
+</div>

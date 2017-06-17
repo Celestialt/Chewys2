@@ -1,31 +1,52 @@
-<p id="notice"><%= notice %></p>
+<br />
 
-<h1>Menu Items</h1>
+<div class ="booyah-box col-10 offset-1">
+  <h1 class="text-center">Menu Items</h1>
+  <hr />
+  <br />
+  <br />
+  <% @menu_items.each do |menu_item| %>
+  
+  	<div class="row menu">
+  		<div class="col-sm-6 col-12 float-left name">
+  			<%= image_tag menu_item.image, class: 'img-fluid' %>
+		    <h2><%= link_to menu_item.name, menu_item_path(menu_item) %></h2>
+      </div>
+      <div class="col-sm-4 col-12">
+        <%= menu_item.description %>
+      </div>
+   	</div>
+  <% end %>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @menu_items.each do |menu_item| %>
-      <tr>
-        <td><%= menu_item.name %></td>
-        <td><%= menu_item.description %></td>
-        <td><%= menu_item.price %></td>
-        <td><%= link_to 'Show', menu_item %></td>
-        <td><%= link_to 'Edit', edit_menu_item_path(menu_item) %></td>
-        <td><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Menu Item', new_menu_item_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

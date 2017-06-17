@@ -52,108 +52,12 @@ RSpec.describe MenuItemsController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new menu_item as @menu_item" do
-      get :new, params: {}, session: valid_session
-      expect(assigns(:menu_item)).to be_a_new(MenuItem)
-    end
-  end
+  
 
-  describe "GET #edit" do
-    it "assigns the requested menu_item as @menu_item" do
-      menu_item = MenuItem.create! valid_attributes
-      get :edit, params: {id: menu_item.to_param}, session: valid_session
-      expect(assigns(:menu_item)).to eq(menu_item)
-    end
-  end
+ 
 
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new MenuItem" do
-        expect {
-          post :create, params: {menu_item: valid_attributes}, session: valid_session
-        }.to change(MenuItem, :count).by(1)
-      end
+  
 
-      it "assigns a newly created menu_item as @menu_item" do
-        post :create, params: {menu_item: valid_attributes}, session: valid_session
-        expect(assigns(:menu_item)).to be_a(MenuItem)
-        expect(assigns(:menu_item)).to be_persisted
-      end
 
-      it "redirects to the created menu_item" do
-        post :create, params: {menu_item: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(MenuItem.last)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns a newly created but unsaved menu_item as @menu_item" do
-        post :create, params: {menu_item: invalid_attributes}, session: valid_session
-        expect(assigns(:menu_item)).to be_a_new(MenuItem)
-      end
-
-      it "re-renders the 'new' template" do
-        post :create, params: {menu_item: invalid_attributes}, session: valid_session
-        expect(response).to render_template("new")
-      end
-    end
-  end
-
-  describe "PUT #update" do
-    context "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested menu_item" do
-        menu_item = MenuItem.create! valid_attributes
-        put :update, params: {id: menu_item.to_param, menu_item: new_attributes}, session: valid_session
-        menu_item.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "assigns the requested menu_item as @menu_item" do
-        menu_item = MenuItem.create! valid_attributes
-        put :update, params: {id: menu_item.to_param, menu_item: valid_attributes}, session: valid_session
-        expect(assigns(:menu_item)).to eq(menu_item)
-      end
-
-      it "redirects to the menu_item" do
-        menu_item = MenuItem.create! valid_attributes
-        put :update, params: {id: menu_item.to_param, menu_item: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(menu_item)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns the menu_item as @menu_item" do
-        menu_item = MenuItem.create! valid_attributes
-        put :update, params: {id: menu_item.to_param, menu_item: invalid_attributes}, session: valid_session
-        expect(assigns(:menu_item)).to eq(menu_item)
-      end
-
-      it "re-renders the 'edit' template" do
-        menu_item = MenuItem.create! valid_attributes
-        put :update, params: {id: menu_item.to_param, menu_item: invalid_attributes}, session: valid_session
-        expect(response).to render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE #destroy" do
-    it "destroys the requested menu_item" do
-      menu_item = MenuItem.create! valid_attributes
-      expect {
-        delete :destroy, params: {id: menu_item.to_param}, session: valid_session
-      }.to change(MenuItem, :count).by(-1)
-    end
-
-    it "redirects to the menu_items list" do
-      menu_item = MenuItem.create! valid_attributes
-      delete :destroy, params: {id: menu_item.to_param}, session: valid_session
-      expect(response).to redirect_to(menu_items_url)
-    end
-  end
 
 end

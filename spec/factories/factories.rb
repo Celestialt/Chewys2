@@ -5,14 +5,12 @@ FactoryGirl.define do
     end
     password "secretPassword"
     password_confirmation "secretPassword"
-  end
-  factory :administrator do
-    sequence :email do |n|
-      "dummy2Email#{n}@gmail.com"
+
+    factory :administrator do
+      admin true
     end
-    password "secret2Password"
-    password_confirmation "secret2Password"
   end
+  
 
   factory :menu_item do
   	name "Homestyle Meatloaf Meal"

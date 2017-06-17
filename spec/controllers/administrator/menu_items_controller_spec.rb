@@ -1,9 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Administrator::MenuItemsController, type: :controller do
-	
+	# include Devise::Test::ControllerHelpers
 	describe "menu_items#index action" do
 		it "should successfully show the page" do
+
+			menu_item = FactoryGirl.create(:menu_item)
+			sign_in menu_item.user
 			get :index
 			expect(response).to have_http_status(:success)
 		end
@@ -14,16 +17,17 @@ RSpec.describe Administrator::MenuItemsController, type: :controller do
 			get :new
 			expect(response).to redirect_to new_user_session_path
 		end
+	end
 	
 
 		it "should successfully show the new form to administrator" do
 			user = FactoryGirl.create(:administrator)
-			sign_in administrator
+			sign_in user
 
 			get :new
 			expect(response).to have_http_status(:success)
 		end
-	end
+end
 
 
 	# describe "administrator/menu_items#create action" do
@@ -54,5 +58,5 @@ RSpec.describe Administrator::MenuItemsController, type: :controller do
 	# 		expect(menu_item.administrator). to eq(administrator)
 	# 	end
 	# end
-end
+# end
 

@@ -45,10 +45,17 @@
 
   <div id="footer">
     <div class="container">
-      <b>Administrator</b>>
-      <br />
-      <%= link_to 'Administrator', new_administrator_menu_item_path %>
+      <div class="row">
+        <div class="col-12 col-sm-3">
+          <b>Administrator</b>>
+          <br />
+          <%= link_to 'Administrator', new_administrator_menu_item_path %>
+          <br />
+          <%= link_to 'Business_Hours', new_administrator_business_hour_path %>
+        </div>
+      </div>
     </div>
+    
   </div>
 
 </body>

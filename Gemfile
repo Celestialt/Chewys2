@@ -66,3 +66,4 @@ gem 'devise'
 
 #simple form gem
 gem 'simple_form'
+gem 'carrierwave', '~> 1.0'

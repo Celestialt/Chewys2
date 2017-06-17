@@ -1,0 +1,26 @@
+<br />
+
+<div class ="booyah-box col-10 offset-1">
+  <h1 class="text-center">Menu Items</h1>
+  <hr />
+<br />
+<br />
+  <% @menu_items.each do |menu_item| %>
+  
+  	<div class="row">
+  		<div class="col-sm-8 col-12 float-left">
+  			<%= image_tag menu_item.image, class: 'img-fluid' %>
+		    <h2><%= link_to menu_item.name, menu_item_path(menu_item) %></h2>
+        <%= menu_item.description %>
+	    </div>
+	   
+	    <!-- <div class="col-sm-4 col-12 float-right"> -->
+	    	
+	 <!--    </div> -->
+   	</div>
+  <% end %>
+</div>
+
+
+
+
