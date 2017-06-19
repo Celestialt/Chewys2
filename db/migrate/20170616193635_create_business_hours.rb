@@ -4,7 +4,11 @@ class CreateBusinessHours < ActiveRecord::Migration[5.0]
     	t.string :day
     	t.string :opening_time
     	t.string :closing_time
-      t.timestamps
+    	t.string :time
+    	t.string :ampm
+    	t.integer :user_id
+    	t.timestamps
     end
+    add_index :business_hours, :user_id
   end
 end

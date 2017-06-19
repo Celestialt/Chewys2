@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   	resources :images, only: [:create, :show]
 	namespace :administrator do
 		resources :menu_items, only: [:index, :new, :create, :show]
-		resources :business_hours, only:  [:new, :create, :show]
+		resources :business_hours, only:  [:index, :new, :create, :show]
 	end
 end

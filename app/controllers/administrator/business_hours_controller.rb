@@ -1,5 +1,9 @@
 class Administrator::BusinessHoursController < ApplicationController
 	before_action :authenticate_user!
+
+	def index
+		
+	end
 	
 	def new
 		@business_hour = BusinessHour.new
@@ -7,9 +11,13 @@ class Administrator::BusinessHoursController < ApplicationController
 
 	
 	def create
-		@business_hour = current_user.business_hours.create(business_params)
+		@business_hour = current_user.business_hours.create(business_hour_params)
 		redirect_to administrator_business_hour_path(@business_hour)
 		
+	end
+
+	def show
+		@business_hour = BusinessHour.find(params[:id])
 	end
 
 	private
