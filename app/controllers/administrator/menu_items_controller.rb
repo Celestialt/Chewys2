@@ -18,6 +18,10 @@ class Administrator::MenuItemsController < ApplicationController
   	@menu_item = MenuItem.find(params[:id])
   end
 
+  def edit
+  	@menu_item = MenuItem.find(params[:id])
+  end
+
 
 	private
 

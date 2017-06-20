@@ -3,4 +3,7 @@
    <%= image_tag @menu_item.image, class: 'img-fluid' %>
    <h1><%= @menu_item.name %></h1>
   <br />
+  <div class="float-right">
+  	<%= link_to 'Edit', edit_administrator_menu_item_path(@menu_item), class: 'btn btn-primary' %>
+  </div>
 </div>
