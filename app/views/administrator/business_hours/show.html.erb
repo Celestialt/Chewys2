@@ -4,4 +4,7 @@
 	<h1><%= @business_hour.day %></h1>
 	<h2><%= @business_hour.opening_time.strftime("%H:%M %p") %></h2> 
 	<h2><%= @business_hour.closing_time.strftime("%H:%M %p") %></h2>
+	<div class="float-right">
+		<%= link_to 'Edit', edit_administrator_business_hour_path(@business_hour), class: 'btn btn-primary' %>
+	</div>
 </div>

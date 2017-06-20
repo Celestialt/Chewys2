@@ -20,6 +20,10 @@ class Administrator::BusinessHoursController < ApplicationController
 		@business_hour = BusinessHour.find(params[:id])
 	end
 
+	def edit
+		@business_hour = BusinessHour.find(params[:id])
+	end
+
 	private
 	
 	def business_hour_params
