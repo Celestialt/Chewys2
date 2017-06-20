@@ -17,9 +17,8 @@ ActiveRecord::Schema.define(version: 20170616193635) do
 
   create_table "business_hours", force: :cascade do |t|
     t.string   "day"
-    t.string   "opening_time"
-    t.string   "closing_time"
-    t.string   "time"
+    t.time     "opening_time"
+    t.time     "closing_time"
     t.string   "ampm"
     t.integer  "user_id"
     t.datetime "created_at",   null: false

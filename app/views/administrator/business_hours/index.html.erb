@@ -1,0 +1,18 @@
+<br />
+
+<div class="booyah-box col-10 offset-1">
+  <h1 class="text-center">Business Hours</h1>
+  <hr />
+   	
+	  <% @business_hours.each do |business_hour| %>
+	  	
+	  	<h2 class="text-center"><%= business_hour.day %></h2>
+	  	<br />
+	  	<div class="row">
+				<div class="col-sm-4 col-12">
+	 				 <h2><%= business_hour.opening_time.strftime("%H:%M %p") %></h2> 
+	 			</div>
+	 		</div>
+ 	  <% end %>
+
+</div>

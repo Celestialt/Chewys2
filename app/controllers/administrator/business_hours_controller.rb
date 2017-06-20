@@ -2,7 +2,7 @@ class Administrator::BusinessHoursController < ApplicationController
 	before_action :authenticate_user!
 
 	def index
-		
+		@business_hours = BusinessHour.all
 	end
 	
 	def new
@@ -12,7 +12,7 @@ class Administrator::BusinessHoursController < ApplicationController
 	
 	def create
 		@business_hour = current_user.business_hours.create(business_hour_params)
-		redirect_to administrator_business_hour_path(@business_hour)
+		redirect_to business_hours_path(@business_hour)
 		
 	end
 
