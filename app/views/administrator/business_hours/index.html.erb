@@ -5,13 +5,21 @@
   <hr />
    	
 	  <% @business_hours.each do |business_hour| %>
-	  	
-	  	<h2 class="text-center"><%= business_hour.day %></h2>
-	  	<br />
-	  	<div class="row">
-				<div class="col-sm-4 col-12">
-	 				 <h2><%= business_hour.opening_time.strftime("%H:%M %p") %></h2> 
-	 			</div>
+
+	  	<div class="container">
+		  	<div class="row">
+		  	<div class="col-sm-4 col-12">
+			  	<h2 class="text-center"><%= business_hour.day %></h2>
+			  </div>
+			    	
+					<div class="col-sm-4 col-12">
+		 				 <h2 class="text-center"><%= business_hour.opening_time.strftime("%l:%M %p") %></h2> 
+		 			</div>
+		 				<div class="col-sm-4 col-12">
+			 				<h2 class="text-center"><%= business_hour.closing_time.strftime("%l:%M %p") %></h2>
+		 				</div>
+		 			</div>
+		 		</div>
 	 		</div>
  	  <% end %>
 

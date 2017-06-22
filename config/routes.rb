@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 	devise_for :users
 	root "static_pages#index"
-	resources :business_hours, only: [:index]
+	resources :business_hours, only: [:index, :show]
   resources :menu_items, only: [:index, :show]
   	resources :images, only: [:create, :show]
 	namespace :administrator do

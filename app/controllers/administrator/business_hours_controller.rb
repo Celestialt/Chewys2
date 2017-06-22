@@ -12,7 +12,7 @@ class Administrator::BusinessHoursController < ApplicationController
 	
 	def create
 		@business_hour = current_user.business_hours.create(business_hour_params)
-		redirect_to business_hours_path(@business_hour)
+		redirect_to business_hour_path(@business_hour)
 		
 	end
 
@@ -22,6 +22,12 @@ class Administrator::BusinessHoursController < ApplicationController
 
 	def edit
 		@business_hour = BusinessHour.find(params[:id])
+	end
+
+	def update
+		@business_hour = BusinessHour.find(params[:id])
+  	@business_hour.update_attributes(business_hour_params)
+  	redirect_to business_hours_path
 	end
 
 	private

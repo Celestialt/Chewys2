@@ -3,13 +3,14 @@
 <div class="booyah-box col-10 offset-1">
 	<h1>Edit Menu Items:</h1>
 
-	<%= simple_form_for @menu_item, url: administrator_menu_items_path do |f| %>
+	 <%#= simple_form_for @menu_item, url: administrator_menu_item_path(@menu_item) do |f| %>
+   <%= simple_form_for [:administrator, @menu_item] do |f| %>   <%# same as above %>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :image %>
     <br />
-    <%= f.submit "Create", class: 'btn btn-primary' %>
+    <%= f.submit "Update", class: 'btn btn-primary' %>
     <br />
   <% end %>
   <br />

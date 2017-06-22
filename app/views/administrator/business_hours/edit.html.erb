@@ -2,7 +2,8 @@
 <div class="booyah-box col-10 offset-1">
 	<h1>Edit Business Hours:</h1>
 	<br />
-	<%= simple_form_for @business_hour, url: administrator_business_hours_path do |f| %>
+	<%#= simple_form_for @business_hour do |f| %>
+  <%= simple_form_for [:administrator, @business_hour] do |f| %>
     <%= f.input :day, label: "Day:" %>
     <%= f.input :opening_time, as: :time, label: "From:", :ampm => true %>
     <%= f.input :closing_time, as: :time, label: "To:", :ampm => true %>

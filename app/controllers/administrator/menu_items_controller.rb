@@ -22,6 +22,12 @@ class Administrator::MenuItemsController < ApplicationController
   	@menu_item = MenuItem.find(params[:id])
   end
 
+  def update
+  	@menu_item = MenuItem.find(params[:id])
+  	@menu_item.update_attributes(menu_item_params)
+  	redirect_to menu_item_path(@menu_item)
+  end
+
 
 	private
 
