@@ -8,14 +8,17 @@
 
 	  	<div class="container">
 		  	<div class="row">
-		  	<div class="col-sm-4 col-12">
+		  	<div class="col-sm-5 col-12">
 			  	<h2 class="text-center"><%= business_hour.day %></h2>
 			  </div>
 			    	
-					<div class="col-sm-4 col-12">
+					<div class="col-sm-2 col-12">
 		 				 <h2 class="text-center"><%= business_hour.opening_time.strftime("%l:%M %p") %></h2> 
 		 			</div>
-		 				<div class="col-sm-4 col-12">
+		 			<div class="col-sm-1 col-12">
+		 				<h2 class="text-center">......</h2>
+		 			</div>
+		 				<div class="col-sm-2 col-12">
 			 				<h2 class="text-center"><%= business_hour.closing_time.strftime("%l:%M %p") %></h2>
 		 				</div>
 		 			</div>

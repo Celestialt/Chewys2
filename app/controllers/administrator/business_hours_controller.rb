@@ -30,6 +30,12 @@ class Administrator::BusinessHoursController < ApplicationController
   	redirect_to business_hours_path
 	end
 
+	def destroy
+		@business_hour = BusinessHour.find(params[:id])
+		@business_hour.destroy
+		redirect_to business_hours_path
+	end
+
 	private
 	
 	def business_hour_params
