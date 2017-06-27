@@ -28,6 +28,11 @@ class Administrator::MenuItemsController < ApplicationController
   	redirect_to menu_item_path(@menu_item)
   end
 
+  def destroy
+    @menu_item = MenuItem.find(params[:id])
+    @menu_item.destroy
+    redirect_to menu_items_path
+  end
 
 	private
 

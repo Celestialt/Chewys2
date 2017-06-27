@@ -9,8 +9,12 @@
   
   	<div class="row menu">
   		<div class="col-sm-6 col-12 float-left name">
-  			<%= image_tag menu_item.image, class: 'img-fluid' %>
+
+      <%= link_to menu_item_path(menu_item) do %>
+  			<%= image_tag menu_item.image,  class: 'img-fluid' %>
 		    <h2><%= link_to menu_item.name, menu_item_path(menu_item) %></h2>
+      <% end %>
+
       </div>
       <div class="col-sm-4 col-12">
         <%= menu_item.description %>

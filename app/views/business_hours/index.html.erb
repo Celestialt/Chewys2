@@ -1,20 +1,28 @@
 <br />
-<br />
-
-<br />
 
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center">Business Hours</h1>
   <hr />
    	
 	  <% @business_hours.each do |business_hour| %>
-	  	
-	  	<h2 class="text-center"><%= business_hour.day %></h2>
-	  	<br />
-	  	<div class="row">
-				<div class="col-sm-4 col-12">
-	 				 <h2><%= business_hour.opening_time.strftime("%H:%M %p") %></h2> 
-	 			</div>
+
+	  	<div class="container">
+		  	<div class="row">
+		  	<div class="col-sm-5 col-12">
+			  	<h2 class="text-center"><%= link_to business_hour.day, business_hour_path(business_hour) %></h2>
+			  </div>
+			    	
+					<div class="col-sm-2 col-12">
+		 				 <h2 class="text-center"><%= link_to business_hour.opening_time.strftime("%l:%M %p"), business_hour_path(business_hour) %></h2> 
+		 			</div>
+		 			<div class="col-sm-1 col-12">
+		 				<h2 class="text-center">......</h2>
+		 			</div>
+		 				<div class="col-sm-2 col-12">
+			 				<h2 class="text-center"><%= link_to business_hour.closing_time.strftime("%l:%M %p"), business_hour_path(business_hour) %></h2>
+		 				</div>
+		 			
+		 		</div>
 	 		</div>
  	  <% end %>
 
