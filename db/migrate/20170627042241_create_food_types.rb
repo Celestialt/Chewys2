@@ -1,6 +1,6 @@
-class CreateNutritions < ActiveRecord::Migration[5.0]
+class CreateFoodTypes < ActiveRecord::Migration[5.0]
   def change
-    create_table :nutritions do |t|
+    create_table :food_types do |t|
     	t.string :appetizer
     	t.string :steak
     	t.string :pizza

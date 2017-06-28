@@ -1,0 +1,13 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+	<h1>Add Nutritional Info. Here:</h1>
+
+	<%= simple_form_for @food, url: administrator_foods_path do |f| %>
+    <%= f.association :food_type %>
+     <br />
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
+    <br />
+	<% end %>
+  <br />
+
+</div>

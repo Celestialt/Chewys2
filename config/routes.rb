@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 	namespace :administrator do
 		resources :menu_items
 		resources :business_hours
+		resources :food_types, only: [:new, :create, :show]
+		resources :foods, only: [:new, :create, :show]
 	end
 end

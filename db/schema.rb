@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170625035551) do
+ActiveRecord::Schema.define(version: 20170628022615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,28 @@ ActiveRecord::Schema.define(version: 20170625035551) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_business_hours_on_user_id", using: :btree
+  end
+
+  create_table "food_types", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+  end
+
+  create_table "foods", force: :cascade do |t|
+    t.string   "serving_size"
+    t.string   "calorie"
+    t.string   "total_fat"
+    t.string   "saturated_fat"
+    t.string   "trans_fat"
+    t.string   "sodium"
+    t.string   "sugar"
+    t.string   "protein"
+    t.string   "food_name"
+    t.integer  "food_type_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["food_type_id"], name: "index_foods_on_food_type_id", using: :btree
   end
 
   create_table "images", force: :cascade do |t|
@@ -43,19 +65,6 @@ ActiveRecord::Schema.define(version: 20170625035551) do
     t.datetime "updated_at",  null: false
     t.string   "image"
     t.index ["user_id"], name: "index_menu_items_on_user_id", using: :btree
-  end
-
-  create_table "nutritions", force: :cascade do |t|
-    t.string   "appetizer"
-    t.string   "steak"
-    t.string   "pizza"
-    t.string   "pasta"
-    t.string   "chicken"
-    t.string   "soup"
-    t.string   "dessert"
-    t.string   "beverage"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
