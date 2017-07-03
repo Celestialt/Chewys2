@@ -4,6 +4,7 @@
 
 	<%= simple_form_for @food_type, url: administrator_food_types_path do |f| %>
     <%= f.input :name %>
+    <%= f.input :food_id, collection: Food.all, as: :grouped_select, group_method: :foods, prompt: "Select One" %>
      <br />
     <%= f.submit "Submit", class: 'btn btn-primary' %>
     <br />

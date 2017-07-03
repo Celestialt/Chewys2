@@ -4,10 +4,19 @@
 
 	<%= simple_form_for @food, url: administrator_foods_path do |f| %>
     <%= f.association :food_type %>
-     <br />
+    <%= f.input :food_name %>
+    <%= f.input :serving_size, label: 'Serving Size(g)' %>
+    <%= f.input :calorie %>
+    <%= f.input :total_fat, label: 'Total Fat(g)' %>
+    <%= f.input :trans_fat, label: 'Trans Fat(g)' %>
+    <%= f.input :sodium, label: 'Sodium(mg)' %>
+    <%= f.input :sugar, label: 'Sugar(g)' %>
+    <%= f.input :protein, label: 'Protein(g)' %>
+   <br />
     <%= f.submit "Submit", class: 'btn btn-primary' %>
     <br />
 	<% end %>
   <br />
 
 </div>
+
