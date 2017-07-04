@@ -1,10 +1,12 @@
 <br />
 <div class="booyah-box col-10 offset-1">
-
+<h1 class="text-center">Nutritional Information</h1>
+<br />
+<br />
 	<% FoodType.all.each do |food_type| %>
-		<%= food_type.name %> 
+		<h1><%= food_type.name %></h1>
 		<% food_type.foods.each do |food| %>
-		  <%= food.name %>
+		 <h2> <%= food.name %></h2>
 		<% end %>
 	<% end %>
 

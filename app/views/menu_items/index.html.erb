@@ -3,24 +3,23 @@
 <div class ="booyah-box col-10 offset-1">
   <h1 class="text-center">Menu Items</h1>
   <hr />
-  <br />
-  <br />
-  <% @menu_items.each do |menu_item| %>
-  
-  	<div class="row menu">
-  		<div class="col-sm-6 col-12 float-left name">
-
-      <%= link_to menu_item_path(menu_item) do %>
-  			<%= image_tag menu_item.image,  class: 'img-fluid' %>
-		    <h2><%= link_to menu_item.name, menu_item_path(menu_item) %></h2>
-      <% end %>
-
+   <% @menu_items.in_groups_of(5, false).each do |group| %>
+    <div class="row">
+      <div class="five columns">
+        <% group.each do |menu_item| %>
+          
+         <div class="menu_item">
+          <%= link_to menu_item_path(menu_item) do %>
+        			<%= image_tag menu_item.image,  class: 'img-fluid' %>
+            <% end %>
+      		  <h2><%= link_to menu_item.name, menu_item_path(menu_item) %></h2>
+          </div>
+        <% end %>
       </div>
-      <div class="col-sm-4 col-12">
-        <%= menu_item.description %>
-      </div>
-   	</div>
-  <% end %>
+    </div>
+        
+    <% end %>
+      
 </div>
 
 

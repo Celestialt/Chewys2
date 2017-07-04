@@ -2,7 +2,7 @@ class Administrator::FoodsController < ApplicationController
 	before_action :authenticate_user!
 
 	def index
-		@foods = Food.all
+		
 	end
 
 	def new
@@ -11,7 +11,7 @@ class Administrator::FoodsController < ApplicationController
 
 	def create
 		@food = current_user.foods.create(food_params)
-		redirect_to food_path(current_user)
+		redirect_to administrator_food_path(@food, current_user)
 	end
 
 	def show

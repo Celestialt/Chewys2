@@ -24,27 +24,38 @@
         </ul>
         <ul class="navbar-nav">
          <% if current_user %>
-            You're signed in as <%= current_user.email %>.
+          <li class="nav-item">
+            "You're signed in as" <%= current_user.email %>.
+          </li>
+          <li class="nav-item">
             <= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          </li>
            <% else %>
+           <li class="nav-item">
             <%= link_to "Sign In", new_user_session_path %>
+           </li>
+           <li class="nav-item">
             <%= link_to "Sign Up", new_user_registration_path %>
+           </li>
           <% end %>
+        </ul>
+      </div>
+    </nav>
           <% if notice.present? %>
             <p class="notice"><%= notice %></p>
           <% end %>
 
           <% if alert.present? %>
             <p class="alert"><%= alert %></p>
-        <% end %>
-      </ul>
+          <% end %>
+       
+      <%= yield %>
     </div>
-  </nav>
-
-  <%= yield %>
 
   <div id="footer">
     <div class="container">
+    <b>Footer Here</b>
+    <br />
       <div class="row">
         <div class="col-12 col-sm-3">
           <b>Administrator</b>>
