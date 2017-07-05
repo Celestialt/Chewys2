@@ -18,6 +18,12 @@
   margin: 10px;
 }
 
+ h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+  paddin: 0;
+}
+
+
 .navbar {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
@@ -26,10 +32,7 @@
   
   }
 
-  h1, h2, h3, h4, h5, h6, .navbar {
-  margin: 0;
-}
-
+ 
 h1 {
   margin-top: 0;
 }
