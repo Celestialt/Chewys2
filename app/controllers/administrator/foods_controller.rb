@@ -10,8 +10,8 @@ class Administrator::FoodsController < ApplicationController
 	end
 
 	def create
-		@food = current_user.foods.create(food_params)
-		redirect_to administrator_food_path(@food, current_user)
+		@food = current_user.foods.create!(food_params)
+		redirect_to administrator_food_path(@food)
 	end
 
 	def show
@@ -22,7 +22,7 @@ class Administrator::FoodsController < ApplicationController
 	private
 
 	def food_params
-		params.require(:food).permit(:food_type, :food_name, :calorie, :total_fat, :saturated_fat, :trans_fat, :sodium, :sugar, :protein) 
+		params.require(:food).permit(:food_type, :food_type_id, :food_name, :calorie, :total_fat, :saturated_fat, :trans_fat, :sodium, :sugar, :protein) 
 	end
 end
 
