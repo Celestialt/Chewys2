@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 	resources :carts
 	resources :foods, only: [:index, :show]
 	resources :business_hours, only: [:index, :show]
-  resources :menu_items, only: [:index, :show] do
+  resources :menu_items, only: [:index, :show] 
   	resources :images, only: [:create, :show]
-  end
+  
 	namespace :administrator do
 		resources :menu_items
 		resources :business_hours
