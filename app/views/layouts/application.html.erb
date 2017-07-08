@@ -58,20 +58,26 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-3">
-          <%= link_to 'About Us', "#" %>
+          <%= link_to 'About Us', root_path %>
           <br />
             <%= link_to 'History', "#" %>
           <br />
-            <%= link_to 'Administrator', new_administrator_menu_item_path %>
+            <%= link_to 'Administrator Menu', new_administrator_menu_item_path %>
+            <br />
+            <%= link_to 'Administrator Nutrition', new_administrator_food_path %>
           
         </div>
         <div class="col-12 col-sm-3">
+        <br />
+            <%= link_to 'Restaurant Hours', business_hours_path %>
           <br />
-            <%= link_to 'Restaurant Hours', new_administrator_business_hour_path %>
+            <%= link_to ' Administrator Restaurant Hours', new_administrator_business_hour_path %>
         </div>
         <div class="col-12 col-sm-3">
           <br />
-            <%= link_to 'Nutrition', new_administrator_food_path %>
+            <%= link_to 'Nutrition', foods_path %>
+            <br />
+            <%= link_to ' Administrator Nutrition', new_administrator_food_path %>
         </div>
         <br />
         <div class="col-12 col-sm-3">

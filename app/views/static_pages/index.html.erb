@@ -4,6 +4,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
@@ -13,15 +14,21 @@
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'slider-2.jpg', class: 'img-fluid' %>
-      <div class="carousel-caption">
-       We have the juciest burgers...you will never leave hungry!
-      </div>
-    </div>
-      <div class="carousel-item">
       <%= image_tag 'slider-3.jpg', class: 'img-fluid' %>
       <div class="carousel-caption">
-       And don't miss our Delectable Desserts!
+       We have the juciest burgers...
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'slider-5.jpg', class: 'img-fluid' %>
+      <div class="carousel-caption">
+        You will never leave hungry!
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'slider-2.jpg', class: 'img-fluid' %>
+      <div class="carousel-caption">
+       Come on in and try our tasty appetizers
       </div>
     </div>
     <div class="carousel-item">
@@ -39,4 +46,26 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+  <br class="clr" />
+<div class="booyah-box col-10 offset-1">
+  <h1 class="about">About Us</h1>
+    <hr />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-12">
+      <br />
+      <p>Chewy's was established in 1925.  A small pizzeria was planted in Niagara Falls by a native Italian cook, who wanted to bring a taste of Italy to his new home for all to try.  It was here that the cook created pizzas unlike any that had been served before.  He would make each pie from scratch, using his secret dough recipe, (always purchasing fresh ingredients for his shop early morning before opening for the day. Each pie was baked for almost an hour in an authentic brick oven.  Now, today the restaurant continues the legacy of fresh hand-made pies with fresh ingredients.  Over the years, Chewy's has expanded its menu to provide a variety of other homestyle meals and desserts for everyone to enjoy.</p>
+      </div>
+      <div class="col-sm-6 col-12">
+        <%= image_tag "restaurant.jpg", class: 'img-fluid' %>
+      </div>
+    </div>
+  </div>
+<div>
+<br class="clr" />
+
+<div class="booyah-box col-10 offset-1 take_out">
+<h1>Take Out</h1>
+  <%= link_to 'Order Now', menu_items_path, class: "btn btn-primary" %>
 </div>

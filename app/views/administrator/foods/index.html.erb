@@ -5,6 +5,37 @@
   <hr />
 
   <% @foods.each do |food| %>
-    <h2 class="text-center"><%= food.food_type %></h2>
-  <% end %>
-</div>
+	  <div class="container">
+			  	<div class="row">
+			  	<div class="col-sm-5 col-12">
+				  	<h2 class="text-center"><%= link_to food.food_name, food_path(food) %></h2>
+				  </div>
+				    	
+						<div class="col-sm-2 col-12">
+			 				 <h2 class="text-center"><%= link_to food.calorie, food_path(food) %></h2> 
+			 			</div>
+		 				<div class="col-sm-2 col-12">
+				 				<h2 class="text-center"><%= link_to food.total_fat, food_path(food) %></h2>
+			 				</div>
+			 				<div class="col-sm-2 col-12">
+				 				<h2 class="text-center"><%= link_to food.saturated_fat, food_path(food) %></h2>
+			 				</div>
+			 				<div class="col-sm-2 col-12">
+				 				<h2 class="text-center"><%= link_to food.trans_fat, food_path(food) %></h2>
+			 				</div>
+			 				<div class="col-sm-2 col-12">
+				 				<h2 class="text-center"><%= link_to food.sodium, food_path(food) %></h2>
+			 				</div>
+			 				<div class="col-sm-2 col-12">
+				 				<h2 class="text-center"><%= link_to food.sugar, food_path(food) %></h2>
+			 				</div>
+			 				<div class="col-sm-2 col-12">
+				 				<h2 class="text-center"><%= link_to food.protein, food_path(food) %></h2>
+			 				</div>
+			 					 			
+			 		</div>
+		 		</div>
+	 	  <% end %>
+
+	</div>
+   

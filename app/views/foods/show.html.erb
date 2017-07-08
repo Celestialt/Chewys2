@@ -3,11 +3,7 @@
 <h1 class="text-center">Nutritional Information</h1>
 <br />
 <br />
-	<% FoodType.all.each do |food_type| %>
-		<h1><%= food_type.name %></h1>
-		<% food_type.foods.each do |food| %>
-		 <h2> <%= food.name %></h2>
-		<% end %>
-	<% end %>
+	<h1><%= @food.food_name %></h1>
+	<h2><%= @food.calorie %></h2>
 
 </div>

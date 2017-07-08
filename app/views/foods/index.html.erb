@@ -1,28 +1,40 @@
 <br />
+
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center">Nutritional Information</h1>
   <hr />
-  <br />
-  <br />
-  <% @food_type.each do |food_type| %>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-12">
-        <h2><%= link_to food_type.name, food_type_path(food_type) %></h2>
-      </div>
-    </div>
+
+      <table id="food_lists">
+      <thead>
+        <tr>
+          <th>Food Type</th>
+          <th>Calories</th>
+          <th>Total Fat(g)</th>
+          <th>Saturated Fat(g)</th>
+          <th>Trans Fat(g)</th>
+          <th>Sodium(mg)</th>
+          <th>Sugar(g)</th>
+          <th>Protein(g)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @foods.each do |food| %>
+          <tr class="food_info">
+
+           <th scope="row"><%= link_to food.food_name, food_path(food) %></th>
+            <td><%= link_to food.food_name, food_path(food) %></td>
+            <td><%= link_to food.calorie, food_path(food) %></td>
+            <td><%= link_to food.total_fat, food_path(food) %></td>
+            <td><%= link_to food.saturated_fat, food_path(food) %></td>
+            <td><<%= link_to food.trans_fat, food_path(food) %></td>
+            <td><%= link_to food.saturated_fat, food_path(food) %></td>
+            <td><%= link_to food.sodium, food_path(food) %></td>
+            <td><<%= link_to food.sugar, food_path(food) %></td>
+            <td><%= link_to food.protein, food_path(food) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
-    <% food_type.foods.each do |food| %>
-      <%= food.name %>
-    <% end %>
-  <% end %>
-
-</div>
-
-
-
-
-
-
-
+   
 
