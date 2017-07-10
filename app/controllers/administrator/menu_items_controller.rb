@@ -2,7 +2,7 @@ class Administrator::MenuItemsController < ApplicationController
 	before_action :authenticate_user!
 	
 	def index
-		
+		@menu_items = MenuItem.all
 	end
 
 	def new
@@ -31,7 +31,7 @@ class Administrator::MenuItemsController < ApplicationController
   def destroy
     @menu_item = MenuItem.find(params[:id])
     @menu_item.destroy
-    redirect_to menu_items_path
+    redirect_to menu_item_path
   end
 
 	private

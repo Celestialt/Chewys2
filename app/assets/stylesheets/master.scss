@@ -11,43 +11,36 @@
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
 }
 
-.booyah-box h2, .booyah-box h1 {
-  
-  margin: 10px;
-}
 
- h1, h2, h3, h4, h5, h6, .navbar {
+
+h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
-  paddin: 0;
+  
 }
 
-#flex-content-container {
-  margin-top: 0;
-  flex-direction: row-top;
+body {
+  background: image_url('fabric_of_squares_gray_@2X.png');
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
+.links {
+  
+  margin-right: 0 !important;
+}
 
-
-.navbar .navbar-inverse {
+.navbar {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
   box-shadow: 0px 1px 3px #2a2a2a;
   background: image_url('black-linen.png');
   
+  
   }
-
- 
-h1 {
-  margin-top: 0;
-}
-
-
-  .navbar-nav > li >a{
-  color: white;
-}
-
 
 .navbar-inverse a.navbar-brand {
   
@@ -58,12 +51,48 @@ h1 {
   
 }
 
+ul.nav li a, ul.nav li a:visited {
+    color: #white !important;
+}
 
+ul.nav li a:hover, ul.nav li a:active {
+    color: #white !important;
+}
+
+ul.nav li.active a {
+    color: #white !important;
+}
+
+.help-block {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+}
+ 
+
+
+ .address {
+  
+  color: white;
+}
+
+.welcome {
+  
+  color: white;
+}
 
 ul {
   list-style-type: none;
+  margin-top: 0;
+   margin-bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
+p {
+  margin: auto;
+}
 
 
 .btn {
@@ -84,9 +113,8 @@ ul {
   font-style: italic;
 }
 
-body {
-  background: image_url('fabric_of_squares_gray_@2X.png');
-}
+
+
 
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a 
 > img {
@@ -132,4 +160,53 @@ body {
 .take_out {
   
   text-align: center;
+}
+
+.menu_item {
+  
+  margin-bottom: 50px;
+}
+
+.menu_description {
+  
+  padding-top: 100px;
+  padding-left: 70px;
+}
+
+.buttons {
+  margin-top: 50%;
+  padding-left: 50%;
+}
+
+.menu-image {
+  
+  margin-top: 60px;
+}
+
+
+
+hr.style7 {
+  border-top: 1px solid #8c8b8b;
+  border-bottom: 1px solid #fff;
+}
+
+.day {
+  
+  margin-bottom: 20px;
+
+}
+
+.hour {
+  margin-bottom: 20px;
+
+}
+
+.dash {
+  margin-bottom: 20px;
+
+}
+
+.time {
+  
+margin-bottom: 20px;
 }
