@@ -3,5 +3,7 @@ class MenuItem < ApplicationRecord
 	has_many :images
 	has_many :foods
 	mount_uploader :image, ImageUploader
+
+	
 end
 

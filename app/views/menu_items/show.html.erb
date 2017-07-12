@@ -9,7 +9,7 @@
       <div class="col-sm-6 col-12  menu_description">
         <h2><%= @menu_item.description %></h2>
         <br />
-        <h4> Meal Price:  $<%= @menu_item.price %></h4>
+        <h4> Meal Price: <%= number_to_currency(@menu_item.price) %></h4>
 
       <div class="buttons">
       <%= link_to 'Add to Cart', cart_items_path(menu_item_id: @menu_item), method: :post, class:'btn btn-primary' %>

@@ -1,3 +1,59 @@
+<!-- <br />
+
+<div class ="booyah-box col-10 offset-1">
+	<h1 class="text-center">Cart</h1>
+	 <hr class="style7">
+
 <% @cart.cart_items.each do |cart_item| %>
-	<p><%= cart_item.menu_item.name %></p>
-<% end %>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-12">
+			
+				<h5><%= cart_item.menu_item.name  %></h5>
+			</div>
+			<div class="col-sm-4 col-12">
+		
+				<h5><%=  cart_item.menu_item.description %></h5>
+			</div>
+				<div class="col-sm-4 col-12">
+			
+					<h5><%= number_to_currency(cart_item.menu_item.price) %></h5>
+				</div>
+					<h5><%= number_to_currency(cart_item.total) %></h5>
+			<% end %>
+	</div>
+	</div>
+	</div>
+
+</div> -->
+
+<br />
+
+<div class="booyah-box col-10 offset-1">
+  <h1 class="text-center">Cart</h1>
+  <hr class="style7" />
+
+      <table id="cart_lists">
+      <thead>
+        <tr>
+          <th>Menu Item</th>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+       <% @cart.cart_items.each do |cart_item| %>
+
+          <tr>
+           
+            <td><%= link_to(cart_item.menu_item.name)  %></td>
+            <td><%= link_to(cart_item.menu_item.description)  %></td>
+            <td><%= link_to(cart_item.menu_item.price)  %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+   
+

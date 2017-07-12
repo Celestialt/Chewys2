@@ -44,6 +44,14 @@
           <li class="nav-item address">
             <h5>Rt. 201 Niagara Falls NY 14301</h5>
           </li>
+
+        </ul>
+        <ul "navbar-nav cart-link">
+          <% if user_signed_in? %>
+            <li class="nav-item">
+            <%= link_to 'View Cart', cart_items_path, class: 'nav-link' %>
+            </li>
+          <% end %>
         </ul>
     
       </div>
@@ -74,6 +82,8 @@
         <div class="col-12 col-sm-3">
           <br />
             <%= link_to 'Restaurant Hours', business_hours_path %>
+          <br />
+            <%= link_to 'View Menu', menu_items_path %>
           <br />
             <%= link_to ' Administrator Restaurant Hours', new_administrator_business_hour_path %>
         </div>

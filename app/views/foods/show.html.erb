@@ -1,9 +1,37 @@
 <br />
 <div class="booyah-box col-10 offset-1">
-<h1 class="text-center">Nutritional Information</h1>
-<br />
-<br />
-	<h1><%= @food.food_name %></h1>
-	<h2><%= @food.calorie %></h2>
+	<h1 class="text-center">Nutritional Information</h1>
+	<br />
+	<br />
 
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th>Food Type</th>
+	      <th>Food Name</th>
+	      <th>Calories</th>
+	      <th>Total Fat(g)</th>
+	      <th>Saturated Fat(g)</th>
+	      <th>Trans Fat(g)</th>
+	      <th>Sodium(mg)</th>
+	      <th>Sugar(g)</th>
+	      <th>Protein(g)</th>
+	    </tr>
+
+	  </thead>
+	  <tbody>
+	  	<tr>
+	   		<td><%= @food.food_type %></td>
+	   		<td><%= @food.food_name%></td>
+	   		<td><%= @food.serving_size %></td>
+	   		<td><%= @food.calorie %></td>
+	   		<td><%= @food.total_fat %></td>
+	   		<td><%= @food.trans_fat %></td>
+	   		<td><%= @food.sodium %></td>
+	   		<td><%= @food.sugar %></td>
+	   		<td><%= @food.protein %></td>
+	   	</tr>
+	        
+    </tbody>
+  </table>
 </div>

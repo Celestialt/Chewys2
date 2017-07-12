@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 	devise_for :users
 	root 'static_pages#index'
-	resources :cart_items, only: :create
+	resources :cart_items
 	resources :carts
 	resources :foods, only: [:index, :show]
 	resources :business_hours, only: [:index, :show]

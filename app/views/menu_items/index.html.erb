@@ -11,7 +11,7 @@
          <div class="menu_item col-2">
           <%= link_to menu_item_path(menu_item) do %>
         			<%= image_tag menu_item.image,  class: 'img-fluid' %>
-            <% end %>
+          <% end %>
       		  <h2><%= link_to menu_item.name, menu_item_path(menu_item) %></h2>
           </div>
         <% end %>

@@ -1,8 +1,8 @@
 <br />
 <div class="booyah-box col-10 offset-1">
-	<h1>Add Nutritional Info. Here:</h1>
+	<h1>Edit Menu Items:</h1>
 
-	<%= simple_form_for @food, url: foods_path do |f| %>
+	 <%= simple_form_for @food, url: administrator_foods_path do |f| %>
     <%= f.association :food_type %>
     <%= f.input :food_name %>
     <%= f.input :serving_size, label: 'Serving Size(g)' %>
@@ -13,10 +13,9 @@
     <%= f.input :sugar, label: 'Sugar(g)' %>
     <%= f.input :protein, label: 'Protein(g)' %>
    <br />
-    <%= f.submit "Submit", class: 'btn btn-primary' %>
+    <%= f.submit "Update", class: 'btn btn-primary' %>
     <br />
-	<% end %>
+  <% end %>
   <br />
-
+  
 </div>
-
