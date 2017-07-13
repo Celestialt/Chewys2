@@ -11,7 +11,12 @@ class Administrator::FoodsController < ApplicationController
 
 	def create
 		@food = current_user.foods.create!(food_params)
+		if @food.valid?
 		redirect_to administrator_food_path(@food)
+		else
+			render :new, status: :unprocessable_entity
+		end
+
 	end
 
 	def show

@@ -11,7 +11,11 @@ class Administrator::MenuItemsController < ApplicationController
 
 	def create
     @menu_item = current_user.menu_items.create(menu_item_params)
-    redirect_to administrator_menu_item_path(@menu_item)
+    if @menu_item.valid?
+      redirect_to administrator_menu_item_path(@menu_item)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show

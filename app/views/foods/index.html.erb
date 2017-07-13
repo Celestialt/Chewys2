@@ -8,9 +8,10 @@
       <thead>
         <tr>
           <th>Food Type</th>
+          <th>Food Name</th>
+          <th>Serving Size(g)</th>
           <th>Calories</th>
           <th>Total Fat(g)</th>
-          <th>Saturated Fat(g)</th>
           <th>Trans Fat(g)</th>
           <th>Sodium(mg)</th>
           <th>Sugar(g)</th>
@@ -21,13 +22,12 @@
         <% @foods.each do |food| %>
           <tr class="food_info">
 
-           <th scope="row"><%= link_to food.food_name, food_path(food) %></th>
+           <th scope="row"><%= link_to food.food_type, food_path(food) %></th>
             <td><%= link_to food.food_name, food_path(food) %></td>
+            <td><%= link_to food.serving_size, food_path(food) %></td>
             <td><%= link_to food.calorie, food_path(food) %></td>
             <td><%= link_to food.total_fat, food_path(food) %></td>
-            <td><%= link_to food.saturated_fat, food_path(food) %></td>
             <td><<%= link_to food.trans_fat, food_path(food) %></td>
-            <td><%= link_to food.saturated_fat, food_path(food) %></td>
             <td><%= link_to food.sodium, food_path(food) %></td>
             <td><<%= link_to food.sugar, food_path(food) %></td>
             <td><%= link_to food.protein, food_path(food) %></td>

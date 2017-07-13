@@ -12,7 +12,11 @@ class Administrator::BusinessHoursController < ApplicationController
 	
 	def create
 		@business_hour = current_user.business_hours.create(business_hour_params)
-		redirect_to business_hour_path(@business_hour)
+		if @business_hour.valid?
+			redirect_to business_hour_path(@business_hour)
+		else
+			render :new, status: :unprocessable_entity
+		end
 		
 	end
 

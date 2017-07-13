@@ -8,7 +8,7 @@
   <% @menu_items.each do |menu_item| %>
   
   	<div class="row">
-  		<div class="col-sm-8 col-12 float-left">
+  		<div class="col-sm-8 col-12 menu-image">
   			<%= image_tag menu_item.image, class: 'img-fluid' %>
 		    <h2><%= link_to menu_item.name, menu_item_path(menu_item) %></h2>
         <%= menu_item.description %>

@@ -8,7 +8,7 @@
 
         <% group.each do |menu_item| %>
           
-         <div class="menu_item col-2">
+         <div class="menu_item col-2 menu-image">
           <%= link_to menu_item_path(menu_item) do %>
         			<%= image_tag menu_item.image,  class: 'img-fluid' %>
           <% end %>
