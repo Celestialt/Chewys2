@@ -17,15 +17,43 @@ RSpec.describe Administrator::MenuItemsController, type: :controller do
 			get :new
 			expect(response).to redirect_to new_user_session_path
 		end
-	end
 	
-
 		it "should successfully show the new form to administrator" do
 			user = FactoryGirl.create(:administrator)
 			sign_in user
 
 			get :new
 			expect(response).to have_http_status(:success)
+		end
+	end
+
+		describe "administrator/menu_items#create action"
+
+			it "should require users to be logged in" do
+				post :create
+				expect(response).to redirect_to_new_user_session_path
+			end
+
+			it "should successfully create a  new menu item in database" do
+				user = FactoryGirl.create(:administrator)
+				sign_in user
+
+				post :create
+				expect(response).to redirect_to new_user_session_path
+
+				menu_item = MenuItem.last
+				expect(menu_item.administrator).to eq(administrator)
+			end
+			it "should properly deal with validation errors" do
+				user = FactoryGirl.create(:administrator)
+				sign_in user
+
+				menu_item_count = MenuItem.count
+	      post :create
+	      expect(response).to have_http_status(:unprocessable_entity)
+	      expect(menu_item_count).to eq MenuItem.count
+
+			end
 		end
 end
 
