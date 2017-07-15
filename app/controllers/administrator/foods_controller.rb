@@ -30,8 +30,11 @@ class Administrator::FoodsController < ApplicationController
 
   def update
   	@food = Food.find(params[:id])
-  	@food.update_attributes(food_params)
-  	redirect_to foods_path
+  	if @food.update_attributes(food_params)
+  		redirect_to foods_path
+  	else 
+  		render "edit"
+  	end
   end
 
   def destroy
@@ -43,7 +46,7 @@ class Administrator::FoodsController < ApplicationController
 	private
 
 	def food_params
-		params.require(:food).permit(:food_type, :food_type_id, :food_name, :calorie, :total_fat, :saturated_fat, :trans_fat, :sodium, :sugar, :protein) 
+		params.require(:food).permit(:food_type, :food_type_id, :food_name, :calorie, :total_fat, :serving_size, :saturated_fat, :trans_fat, :sodium, :sugar, :protein) 
 	end
 end
 

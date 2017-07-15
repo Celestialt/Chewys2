@@ -22,14 +22,14 @@
         <% @foods.each do |food| %>
           <tr class="food_info">
 
-           <th scope="row"><%= link_to food.food_type, food_path(food) %></th>
+           <th scope="row"><%= link_to food.food_type.try(:name), food_path(food) %></th>
             <td><%= link_to food.food_name, food_path(food) %></td>
             <td><%= link_to food.serving_size, food_path(food) %></td>
             <td><%= link_to food.calorie, food_path(food) %></td>
             <td><%= link_to food.total_fat, food_path(food) %></td>
-            <td><<%= link_to food.trans_fat, food_path(food) %></td>
+            <td><%= link_to food.trans_fat, food_path(food) %></td>
             <td><%= link_to food.sodium, food_path(food) %></td>
-            <td><<%= link_to food.sugar, food_path(food) %></td>
+            <td><%= link_to food.sugar, food_path(food) %></td>
             <td><%= link_to food.protein, food_path(food) %></td>
           </tr>
         <% end %>

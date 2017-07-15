@@ -7,7 +7,7 @@ class CartItemsController < ApplicationController
 	
 
 	def destroy
-		@cart_item = current_user.current_cart.cart_items.find(cart_item_params[:id])
+		@cart_item = current_user.current_cart.cart_items.find(params[:id])
 		@cart_item.destroy
 		redirect_to current_user.current_cart
 

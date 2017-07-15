@@ -78,3 +78,5 @@ gem 'carrierwave', '~> 1.0'
 #Dstatable
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 
+
+gem 'stripe'
