@@ -80,3 +80,5 @@ gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-ra
 
 
 gem 'stripe'
+
+gem "figaro"
